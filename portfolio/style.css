@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500&family=Raleway:wght@300&display=swap');
+
+:root {
+    --primary-color: #eeeae0;
+    --text-color: #232929;
+}
+
+body {
+    background-image: url("bg2.jpg");
+    background-repeat: repeat;
+    background-size: 500px;
+    background-color: #eeeae0;
+    height: 100%;
+    font-family: 'Raleway';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a {
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+header {
+    background: var(--primary-color);
+    padding: 1em;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    
+}
+
+
+.logo{
+    width: 100px;
+    justify-self: flex-start;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav_links a:hover{font-weight: 600;}
+
+
+.line{
+    display: block;
+    border: 0;
+    height: 1px;
+    background: var(--text-color);
+}
+
+
+section{
+    padding: 15em 1em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#start{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+
+
+#name{
+    display: inline-block;
+    padding: 5%;
+    width: 50%;
+    font-weight: 500;
+    font-size: 70px;
+}
+
+#description{
+    display: inline-block;
+    padding: 5%;
+}
+
+#mid {
+    padding-top: 5em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+
+#mid article {
+    display: flex;
+}
+
+#mid img {
+    width: 30%;
+    
+}
+
+#mid a{
+    font-size: 10px;
+}
+
+
+#mid .title{
+    font-weight: 500;
+    width: 70%;
+    padding-bottom: 5%;
+    
+}
+
+#mid div{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+#end {
+    padding-top: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#end .title{
+    font-size: 40px;
+    padding-bottom: 5%;
+}
+
+#end #kuva{
+    width: 60%;
+}
+
+#end div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#end a{
+    display: inline-block;
+    padding: 5%;
+}
+
+#end .button{
+    padding: 20px;
+    
+}
+
+.button:hover{animation: rotation 5s linear}
+
+footer{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+footer img{
+    padding-inline: 5% 2%;
+    width: 50%;
+    animation: rotation 10s infinite linear;
+}
+
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+  }
+
+  /*desktop*/
+@media only screen and (min-width: 768px){
+    #start{
+        flex-direction: row;
+    }
+
+    li, a{
+        font-size: 40px;
+    }
+
+    #description{
+        width: 50%;
+        padding-top: 10%;
+    }
+    
+    #name{
+        font-size: 100px;
+    }
+
+    #mid a{
+        font-size: 20px;
+    }
+
+    #end .title{
+        font-size: 50px;
+    }
+
+    #end #kuva{
+        width: 30%;
+    }
+
+    footer img{
+        width: 30%;
+    }
+
+}
+
+/*erittiän pieni mobiili*/
+@media only screen and (max-width: 330px){
+    .logo{
+        width: 80px;
+    }
+
+    li, a{
+        font-size: 18px;
+    }
+}
