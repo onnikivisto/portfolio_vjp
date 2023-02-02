@@ -230,7 +230,7 @@ footer img{
 
 }
 
-/*erittiän pieni mobiili*/
+/*erittäin pieni mobiili*/
 @media only screen and (max-width: 330px){
     .logo{
         width: 80px;
